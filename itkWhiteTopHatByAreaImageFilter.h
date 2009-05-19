@@ -22,11 +22,10 @@
 namespace itk {
 
 /** \class WhiteTopHatByAreaImageFilter
- * \brief White top hat extract local maxima that are larger than the structuring element
+ * \brief White top hat extract regional maxima that are bigger than the lambda parameter
  *
- * Top-hats are described in Chapter 4.5 of Pierre Soille's book 
- * "Morphological Image Analysis: Principles and Applications", 
- * Second Edition, Springer, 2003.
+ * If the filter is used with UseImageSpacingOff, it may be useful to give an
+ * integer type as attribute type - generally, unsigned long.
  * 
  * \author Gaetan Lehmann. Biologie du Developpement et de la Reproduction, INRA de Jouy-en-Josas, France.
  *
