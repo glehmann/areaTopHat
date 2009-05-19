@@ -37,7 +37,7 @@ class ITK_EXPORT BlackTopHatByAreaImageFilter :
 {
 public:
   /** Standard class typedefs. */
-  typedef BlackTopHatByAreaImageFilter                        Self;
+  typedef BlackTopHatByAreaImageFilter                  Self;
   typedef ImageToImageFilter<TInputImage, TOutputImage> Superclass;
   typedef SmartPointer<Self>                            Pointer;
   typedef SmartPointer<const Self>                      ConstPointer;

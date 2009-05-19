@@ -37,7 +37,7 @@ class ITK_EXPORT WhiteTopHatByAreaImageFilter :
 {
 public:
   /** Standard class typedefs. */
-  typedef WhiteTopHatByAreaImageFilter                        Self;
+  typedef WhiteTopHatByAreaImageFilter                  Self;
   typedef ImageToImageFilter<TInputImage, TOutputImage> Superclass;
   typedef SmartPointer<Self>                            Pointer;
   typedef SmartPointer<const Self>                      ConstPointer;

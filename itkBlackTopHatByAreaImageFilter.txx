@@ -29,9 +29,9 @@ template <class TInputImage, class TOutputImage, class TAttribute>
 BlackTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
 ::BlackTopHatByAreaImageFilter()
 {
-    m_UseImageSpacing = true;
-    m_FullyConnected = false;
-    m_Lambda = 0;
+  m_UseImageSpacing = true;
+  m_FullyConnected = false;
+  m_Lambda = 0;
 }
 
 template <class TInputImage, class TOutputImage, class TAttribute>

@@ -29,9 +29,9 @@ template <class TInputImage, class TOutputImage, class TAttribute>
 WhiteTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
 ::WhiteTopHatByAreaImageFilter()
 {
-    m_UseImageSpacing = true;
-    m_FullyConnected = false;
-    m_Lambda = 0;
+  m_UseImageSpacing = true;
+  m_FullyConnected = false;
+  m_Lambda = 0;
 }
 
 template <class TInputImage, class TOutputImage, class TAttribute>
