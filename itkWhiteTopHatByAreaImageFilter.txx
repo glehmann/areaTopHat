@@ -52,16 +52,6 @@ WhiteTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
 template <class TInputImage, class TOutputImage, class TAttribute>
 void 
 WhiteTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
-::EnlargeOutputRequestedRegion(DataObject *)
-{
-  this->GetOutput()
-    ->SetRequestedRegion( this->GetOutput()->GetLargestPossibleRegion() );
-}
-
-
-template <class TInputImage, class TOutputImage, class TAttribute>
-void 
-WhiteTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
 ::GenerateData()
 {
   // Create a process accumulator for tracking the progress of this minipipeline

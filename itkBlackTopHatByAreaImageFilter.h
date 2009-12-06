@@ -105,9 +105,6 @@ protected:
    * GenerateInputRequestedRegion(). */
   void GenerateInputRequestedRegion();
 
-  /** BlackTopHatByAreaImageFilter will produce the entire output. */
-  void EnlargeOutputRequestedRegion(DataObject *itkNotUsed(output));
-  
   void GenerateData();
   
 
