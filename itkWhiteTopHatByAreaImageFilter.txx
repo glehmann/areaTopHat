@@ -68,12 +68,14 @@ WhiteTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
   open->SetLambda( m_Lambda );
   open->SetFullyConnected( m_FullyConnected );
   open->SetUseImageSpacing( m_UseImageSpacing );
+  open->SetNumberOfThreads( this->GetNumberOfThreads() );
   
   // Need to subtract the opened image from the input
   typedef SubtractImageFilter<TInputImage, TInputImage, TOutputImage> SubtractType;
   typename SubtractType::Pointer subtract = SubtractType::New();
   subtract->SetInput1( this->GetInput() );
   subtract->SetInput2( open->GetOutput() );
+  subtract->SetNumberOfThreads( this->GetNumberOfThreads() );
 
   // graft our output to the subtract filter to force the proper regions
   // to be generated

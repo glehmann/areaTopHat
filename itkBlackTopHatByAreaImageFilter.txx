@@ -68,12 +68,14 @@ BlackTopHatByAreaImageFilter<TInputImage, TOutputImage, TAttribute>
   close->SetLambda( m_Lambda );
   close->SetFullyConnected( m_FullyConnected );
   close->SetUseImageSpacing( m_UseImageSpacing );
+  close->SetNumberOfThreads( this->GetNumberOfThreads() );
   
   // Need to subtract the closeed image from the input
   typedef SubtractImageFilter<TInputImage, TInputImage, TOutputImage> SubtractType;
   typename SubtractType::Pointer subtract = SubtractType::New();
   subtract->SetInput1( close->GetOutput() );
   subtract->SetInput2( this->GetInput() );
+  subtract->SetNumberOfThreads( this->GetNumberOfThreads() );
 
   // graft our output to the subtract filter to force the proper regions
   // to be generated
