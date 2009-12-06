@@ -8,7 +8,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.4.2)
 INCLUDE(CPack)
 
 # set the name of the input image used to run the test
-SET(INPUT_IMAGE ${CMAKE_CURRENT_SOURCE_DIR}/images/cthead1.png)
+SET(INPUT_IMAGE ${CMAKE_CURRENT_SOURCE_DIR}/images/cthead1.tif)
 
 #include some macros from another file...
 INCLUDE(IJMacros.txt)
