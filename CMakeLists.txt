@@ -87,7 +87,27 @@ ENDIF(BUILD_TESTING)
 #any tests you can comment out or delete the following line.
 # ADD_TEST(Testname ExecutableToRun arg1 arg2 arg3)
 
-ADD_TEST(Test ${TEST_COMMAND}
-   check ${INPUT_IMAGE} out.png
-   --compare out.png ${CMAKE_CURRENT_SOURCE_DIR}/images/test.png
+ADD_TEST(White-1000-0-0 ${TEST_COMMAND}
+   white ${INPUT_IMAGE} white-1000-0-0.png 1000 0 0
+   --compare white-1000-0-0.png ${CMAKE_CURRENT_SOURCE_DIR}/images/white-1000-0-0.png
+)
+ADD_TEST(White-1000-1-0 ${TEST_COMMAND}
+   white ${INPUT_IMAGE} white-1000-1-0.png 1000 1 0
+   --compare white-1000-1-0.png ${CMAKE_CURRENT_SOURCE_DIR}/images/white-1000-1-0.png
+)
+ADD_TEST(White-1000-0-1 ${TEST_COMMAND}
+   white ${INPUT_IMAGE} white-1000-0-1.png 1000 0 1
+   --compare white-1000-0-1.png ${CMAKE_CURRENT_SOURCE_DIR}/images/white-1000-0-1.png
+)
+ADD_TEST(Black-1000-0-0 ${TEST_COMMAND}
+   black ${INPUT_IMAGE} black-1000-0-0.png 1000 0 0
+   --compare black-1000-0-0.png ${CMAKE_CURRENT_SOURCE_DIR}/images/black-1000-0-0.png
+)
+ADD_TEST(Black-1000-1-0 ${TEST_COMMAND}
+   black ${INPUT_IMAGE} black-1000-1-0.png 1000 1 0
+   --compare black-1000-1-0.png ${CMAKE_CURRENT_SOURCE_DIR}/images/black-1000-1-0.png
+)
+ADD_TEST(Black-1000-0-1 ${TEST_COMMAND}
+   black ${INPUT_IMAGE} black-1000-0-1.png 1000 0 1
+   --compare black-1000-0-1.png ${CMAKE_CURRENT_SOURCE_DIR}/images/black-1000-0-1.png
 )
