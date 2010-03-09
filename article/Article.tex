@@ -35,6 +35,14 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 % the relevant document. 
 \title{Tophap by area}
 
+% 
+% NOTE: This is the last number of the "handle" URL that 
+% The Insight Journal assigns to your paper as part of the
+% submission process. Please replace the number "1338" with
+% the actual handle number that you get assigned.
+%
+\newcommand{\IJhandlerIDnumber}{}
+
 % Increment the release number whenever significant changes are made.
 % The author and/or editor can define 'significant' however they like.
 % \release{0.00}
@@ -47,6 +55,15 @@ D\'eveloppement et
 Reproduction, Jouy en Josas, F-78350, France.}
 
 \begin{document}
+
+
+%
+% Add hyperlink to the web location and license of the paper.
+% The argument of this command is the handler identifier given
+% by the Insight Journal to this paper.
+% 
+\IJhandlefooter{\IJhandlerIDnumber}
+
 \maketitle
 
 \ifhtml
@@ -62,6 +79,8 @@ It is often used to remove the background in an image, where the background is d
 Similarly, the tophat by area is used to remove the background in an image, but the criteria of selection is the size of the connected component, either in physical size or in number of pixels, and is independant of the shape of the connected component. This property makes easier to describe the criteria. 
 % Another important property of the tophat by area, inherited from the area opening used internally, is that it ensure to never add any edge in the image -- it only removes some of them.
 \end{abstract}
+
+\IJhandlenote{\IJhandlerIDnumber}
 
 \tableofcontents
 
